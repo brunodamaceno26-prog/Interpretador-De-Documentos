@@ -1,0 +1,25 @@
+[project]
+name = "interpretador-contratos"
+version = "0.4.0"
+description = "Lê contratos em PDF, divide em cláusulas, busca termos e recorta trechos."
+requires-python = ">=3.10"
+license = "AGPL-3.0-or-later"
+dependencies = ["pymupdf>=1.24", "anthropic>=0.40", "streamlit>=1.40"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+contratos = "contratos.cli:main"
+contratos-app = "contratos.iniciar_app:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+# nunca versionar contratos reais
+*.pdf
+!exemplos/*.pdf
+*.egg-info/
+build/
+dist/
